@@ -8,3 +8,33 @@ minimumBribes has the following parameter(s):
     q: an array of integers
 """
 
+# Complete the minimumBribes function below.
+def minimumBribes(q):
+    TotalBribes = 0
+    bribe = True
+    people = len(q)
+
+    n = len(q)
+ 
+    # Traverse through all array elements
+    for i in range(n):
+ 
+        # Last i elements are already in place
+        for j in range(0, n-i-1):
+ 
+            # traverse the array from 0 to n-i-1
+            # Swap if the element found is greater
+            # than the next element
+            if q[j] > q[j+1] :
+                q[j], q[j+1] = q[j+1], q[j]
+                TotalBribes += 1
+    print(q)
+    print(TotalBribes)
+        
+
+
+
+
+
+q = [2,1,5,3,4]
+minimumBribes(q)
