@@ -14,13 +14,11 @@ def minimumBribes(q):
     bribe = True
     people = len(q)
 
-    n = len(q)
- 
     # Traverse through all array elements
-    for i in range(n):
+    for i in range(people):
  
         # Last i elements are already in place
-        for j in range(0, n-i-1):
+        for j in range(0, people-i-1):
  
             # traverse the array from 0 to n-i-1
             # Swap if the element found is greater
