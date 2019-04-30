@@ -11,15 +11,24 @@ minimumBribes has the following parameter(s):
 # Complete the minimumBribes function below.
 def minimumBribes(q):
     TotalBribes = 0
-    bribe = True
+    #bribe = True
     people = len(q)
+    #chaos = True
 
     # Traverse through all array elements
     for i in range(people):
+        #print("Person", i, "is", q[i-1])
+        if TotalBribes == "Too chaotic":
+            break
  
         # Last i elements are already in place
         for j in range(0, people-i-1):
- 
+            if (i == 0 and j+1 < q[j+1]-3):
+                TotalBribes = "Too chaotic"
+                #print(q[j+1],"Too chaotic at position", j+1, 'j =', j)
+                
+                break
+
             # traverse the array from 0 to n-i-1
             # Swap if the element found is greater
             # than the next element
@@ -34,5 +43,5 @@ def minimumBribes(q):
 
 
 
-q = [2,1,5,3,4]
+q = [2,5,1,3,4]
 minimumBribes(q)
