@@ -12,8 +12,10 @@ minimumBribes has the following parameter(s):
 def minimumBribes(q):
     TotalBribes = 0
     #bribe = True
-    people = len(q)
+    people = n
     #chaos = True
+    if 0 < q[0]-3:
+        TotalBribes = "Too chaotic"
 
     # Traverse through all array elements
     for i in range(people):
@@ -42,6 +44,6 @@ def minimumBribes(q):
 
 
 
-
+n = 5
 q = [2,5,1,3,4]
 minimumBribes(q)
